@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+
+<body ng-app="app" ng-controller="mainController">
+    <header>
+        <h2>Heroes Program</h2>
+        <input type="text" ng-model="search" placeholder="search heroes...">
+    </header>
+    <aside>
+        <div ng-repeat="lik in heroes | filter:search" id="glavniDiv" ng-click="ShowHide(lik)" ng-model="IsVisible">
+            <div id="divOdSlike"><img src="{{lik.picture}}" style="width: 50px; border-radius: 50%;"></div>
+            <div id="divOpis">{{$index}} {{lik.name}} <br>{{lik.description}}</div>
+
+            <div><i ng-click="deleteHero(lik)" class="fas fa-trash"></i></div>
+        </div>
+        <form class="addNewStudent" ng-submit="addLik()">
+            <input type="text" placeholder="Hero name" ng-model="newLik.name"><br>
+            <input type="text" placeholder="Describe hero" ng-model="newLik.description"><br>
+            <input type="text" placeholder="Hero image" ng-model="newLik.picture"><br>
+            <button type="submit">Add hero</button>
+            <p>Test URL for image:
+                https://i0.wp.com/www.cssscript.com/wp-content/uploads/2020/12/Customizable-SVG-Avatar-Generator-In-JavaScript-Avataaars.js.png
+            </p>
+
+        </form>
+    </aside>
+    <main>
+        <div class="mainDiv" ng-show="IsVisible" ng-click="ShowHide">
+            <div class="gornjiDiv">
+                <img src="{{pressedLik.picture}}" style="width: 60px; border-radius: 50%; margin: 10px;">
+                <span class="imeNaMainu"> {{$index}} {{pressedLik.name}}</span>
+            </div>
+            <p>{{pressedLik.description}}</p>
+            <img id="velikaSlika" src="{{pressedLik.picture}}" style="width: 100%;">
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

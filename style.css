@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    overflow: auto;
+}
+
+header{
+    height: 50px;
+    background-color: rgb(156, 70, 0);
+    color: #fff;
+}
+
+header h2{
+    padding: 7px;
+    float: left;
+}
+
+header input {
+    float: right;
+    margin: 15px 30px;
+    padding: 5px 50px 5px 0;
+    outline: none;
+    border: none;
+}
+
+aside {
+    width: 48%;
+    margin: 20px;
+    float: left;
+}
+
+#glavniDiv{
+    overflow: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#glavniDiv:hover{
+    background-color: #ddd;
+    box-shadow: 0px 0px 5px 0px rgba(74,74,74,1);
+    cursor: pointer;
+}
+
+#divOdSlike {
+    float: left;
+    margin: 3px 4px 0 5px;
+}
+
+#divOpis {
+    float: left;
+    margin: 3px;
+}
+
+.fa-trash{
+    float: right;
+    padding: 10px;
+    margin: 10px;
+}
+
+.fa-trash:hover{
+    background-color: rgb(116, 116, 116);
+    color: white;
+    border-radius: 50%;
+}
+
+.addNewStudent{
+    margin-top: 20px;
+}
+
+.addNewStudent input, button {
+    margin: 10px;
+    padding: 5px;
+    padding-right: 100px;
+}
+
+main {
+    width: 40%;
+    display: flex;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+    border-radius: 20px;
+    margin: 10px auto;
+}
+
+.mainDiv p{
+    margin: 10px 30px;
+}
+
+.gornjiDiv{
+    display: inline-flex;
+}
+
+.imeNaMainu{
+    margin-left: 10px;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+}
+
+#velikaSlika{
+    padding: 20px;
+}
